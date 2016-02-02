@@ -26,12 +26,9 @@ build:
 
 #slack notification build step           
   after-steps:
-    - sherzberg/slack-notify:
-        subdomain: wercker
-        token: $SLACK_TOKEN
-        channel: builds
     - wantedly/pretty-slack-notify:
         webhook_url: $SLACK_TOKEN
+        channel: builds
 deploy:
   steps:
     - dlapiduz/cloud-foundry-deploy:
