@@ -23,7 +23,8 @@ build:
             code: |
                 #gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR uploadArtifacts
                 echo 'step not implemented'
-                
+
+#slack notification build step           
   after-steps:
     - sherzberg/slack-notify:
         subdomain: wercker
