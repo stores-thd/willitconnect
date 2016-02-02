@@ -30,6 +30,8 @@ build:
         subdomain: wercker
         token: $SLACK_TOKEN
         channel: builds
+    - wantedly/pretty-slack-notify:
+        webhook_url: $SLACK_TOKEN
 deploy:
   steps:
     - dlapiduz/cloud-foundry-deploy:
