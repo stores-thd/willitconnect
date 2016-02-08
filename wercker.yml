@@ -39,6 +39,8 @@ deploy:
       organization: $CF_ORG
       space: $CF_SPACE
       appname: willitconnect
+      properties:
+        cloudfoundry_path: $WERCKER_CACHE_DIR
   #slack notification deploy step           
   after-steps:
     - slack-notifier:
