@@ -24,7 +24,8 @@ build:
                 #gradle --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR uploadArtifacts
                 echo 'step not implemented'
 
-#slack notification build step           
+#slack notification build step
+#test webhook
   after-steps:
     - slack-notifier:
       url: $SLACK_TOKEN
